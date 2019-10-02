@@ -5,8 +5,7 @@
     <ProjectGuid>82f784cf-f1f2-435e-ad76-83fccfc8d585</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>launch_window.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <SearchPath>..\CEA;..\launch_window;..\Algorithms\Trajectory</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>launch_window</Name>
@@ -21,6 +20,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="atmospherefunction.py" />
+    <Compile Include="CEAfunctions.py" />
+    <Compile Include="CEAPython.py" />
+    <Compile Include="location.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeltaVCalc.py" />
     <Compile Include="launch_window.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
