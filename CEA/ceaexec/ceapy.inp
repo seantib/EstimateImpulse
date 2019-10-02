@@ -1,0 +1,9 @@
+problem
+rocket
+p,psi=300
+pc/p=27.2
+o/f=2.0
+reac
+fuel CH4 t,k=298 wt%=100.00
+oxid O2(L) t,k=90.17 wt%=100.00
+end
