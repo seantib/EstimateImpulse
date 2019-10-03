@@ -1,5 +1,7 @@
 # Purpose of the program - Calculate the Delta-V requirements for a specific altitude
 from math import sqrt
+from atmospherefunction import atmConditions
+import astropy.units as u
 
 def calcDeltaV():
     'Estimate the DeltaV required for a specific Altitude'
@@ -9,6 +11,7 @@ def calcDeltaV():
 
     altitude = input("Enter desired altitude (m): ")
     altitude = float(altitude)
+    Temp, press, air_density, air_R, g = atmConditions(altitude*u.m)
 
     EnergyEnd = -mu/(Rearth+altitude)
 

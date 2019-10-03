@@ -21,7 +21,7 @@ def atmConditions(h):
        3. Constant composition of atmosphere throughout altitude range.
        4. Relative humidity not considered (dry air!)."""
     #g0 = -32.174*(u.ft/(u.s*u.s)) # ft/sec**2
-    g = Earth.k/((Earth.R_mean+h)**2)
+    g = Earth.k/((Earth.R_mean+np.linspace(0,h,num=100))**2)
     deg_R = u.def_unit('deg_R', represents=u.K, format={'latex': r'\degree R'})
 #    Rankine = u.def_unit('Rankine',u.deg_F + 459.67)
     T_ssl = (15 + 273.15)*deg_R 
